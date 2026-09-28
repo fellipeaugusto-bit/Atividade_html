@@ -30,17 +30,17 @@ formulario.addEventListener('submit', function (evento) {
   const email = campoEmail.value.trim().toLowerCase();
   const senha = campoSenha.value;
 
-  // 1) Ficou algum campo vazio?
+  // caso algum campo ficar vazio
   if (email === '' || senha === '') {
     mostrarMensagem('Ops! Preencha o e-mail e a senha para continuar.', 'erro');
     return;
   }
 
-  // 2) O e-mail e a senha estão certos?
+  // caso o e-mail e a senha estiver certo
   if (email === emailCerto && senha === senhaCerta) {
     mostrarMensagem('Tudo certo! Bem-vindo(a) de volta.', 'sucesso');
 
-    // Guarda ou esquece o e-mail, dependendo do "Lembrar-me"
+    // aqui guarda ou esquece o e-mail, dependendo do "Lembrar-me"
     if (caixaLembrar.checked) {
       localStorage.setItem('emailLembrado', email);
     } else {
