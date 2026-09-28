@@ -99,3 +99,21 @@ h1 {
 .esqueci a {
   color: #2255cc;
 }
+
+.mensagem {
+  margin-top: 16px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.mensagem:empty {
+  display: none;
+}
+
+.mensagem.erro {
+  color: #cc3333;
+}
+
+.mensagem.sucesso {
+  color: #2a8a4a;
+}
